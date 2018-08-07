@@ -16,6 +16,8 @@ public class SpringHelloApp {
         Coach myCricketCoach = context.getBean("myCricketCoach", CricketCoach.class);
         System.out.println(myCricketCoach.getDailyFortune());
         System.out.println(myCricketCoach.getDailyWorkout());
+        System.out.println(((CricketCoach) myCricketCoach).getEmailAddress());
+        System.out.println(((CricketCoach) myCricketCoach).getTeam());
 
         context.close();
     }

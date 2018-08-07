@@ -14,6 +14,12 @@
 
     <bean id="myCricketCoach"
           class="com.gebarowski.legacy.CricketCoach">
+
+        <!-- set up setter injection -->
         <property name="fortuneService" ref="myFortuneService"/>
+
+        <!-- set up setter injection -->
+        <property name="emailAddress" value="michalgebarowski@coach.com"/>
+        <property name="team" value="SuperCoach"/>
     </bean>
 </beans>
