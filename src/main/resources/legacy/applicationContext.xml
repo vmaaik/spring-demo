@@ -4,5 +4,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	   		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
 
-    <bean id="myCoach" class="com.gebarowski.legacy.TrackCoach"></bean>
+
+    <bean id="myFortune"
+          class="com.gebarowski.legacy.HappyFortuneService"></bean>
+    <bean id="myCoach"
+          class="com.gebarowski.legacy.TrackCoach">
+          <constructor-arg ref="myFortune" />
+    </bean>
+
+
 </beans>
