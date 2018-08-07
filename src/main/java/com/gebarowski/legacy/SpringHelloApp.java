@@ -1,5 +1,7 @@
 package com.gebarowski.legacy;
 
+import com.gebarowski.legacy.coach.Coach;
+import com.gebarowski.legacy.coach.CricketCoach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringHelloApp {
@@ -20,5 +22,16 @@ public class SpringHelloApp {
         System.out.println(((CricketCoach) myCricketCoach).getTeam());
 
         context.close();
+
+        // bean scope
+        ClassPathXmlApplicationContext context1 = new ClassPathXmlApplicationContext("legacy/beanScope-applicationContext.xml");
+        Coach theCoach = context1.getBean("myCoach", Coach.class);
+        Coach alphaCoach = context1.getBean("myCoach", Coach.class);
+        boolean result = (theCoach == alphaCoach);
+        System.out.println("Pointing to the same object: "+ result);
+        System.out.println("Memory location for theCoach: "+ theCoach);
+        System.out.println("Memory location for alphaCoach: "+ alphaCoach);
+
+        context1.close();
     }
 }
