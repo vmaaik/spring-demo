@@ -1,4 +1,4 @@
-package com.gebarowski.legacy;
+package com.gebarowski.legacy.coach;
 
 public interface Coach {
     public String getDailyWorkout();

@@ -1,4 +1,6 @@
-package com.gebarowski.legacy;
+package com.gebarowski.legacy.coach;
+
+import com.gebarowski.legacy.service.FortuneService;
 
 public class CricketCoach implements Coach {
 

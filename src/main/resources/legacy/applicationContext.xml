@@ -9,14 +9,14 @@
     <context:property-placeholder location="legacy/sport.properties"/>
 
     <bean id="myFortuneService"
-          class="com.gebarowski.legacy.HappyFortuneService"></bean>
+          class="com.gebarowski.legacy.service.HappyFortuneService"></bean>
     <bean id="myCoach"
-          class="com.gebarowski.legacy.TrackCoach">
+          class="com.gebarowski.legacy.coach.TrackCoach">
         <constructor-arg ref="myFortuneService"/>
     </bean>
 
     <bean id="myCricketCoach"
-          class="com.gebarowski.legacy.CricketCoach">
+          class="com.gebarowski.legacy.coach.CricketCoach">
 
         <!-- set up setter injection -->
         <property name="fortuneService" ref="myFortuneService"/>

@@ -1,4 +1,4 @@
-package com.gebarowski.legacy;
+package com.gebarowski.legacy.service;
 
 public interface FortuneService {
 
