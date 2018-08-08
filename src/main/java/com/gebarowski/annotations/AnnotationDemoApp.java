@@ -10,14 +10,16 @@ public class AnnotationDemoApp {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("annotations/applicationContext.xml");
         Coach coach = context.getBean("tennisCoach", Coach.class);
         System.out.println(coach.getDailyWorkout());
-
         System.out.println(coach.getDailyFortune());
 
         // setter injection
         Coach coach1 = context.getBean("hockeyCoach", Coach.class);
         System.out.println(coach1.getDailyFortune());
 
+        // field injection
+        Coach coach2 = context.getBean("footballCoach", Coach.class);
+        System.out.println(coach2.getDailyWorkout());
+        System.out.println(coach2.getDailyFortune());
         context.close();
-
     }
 }
