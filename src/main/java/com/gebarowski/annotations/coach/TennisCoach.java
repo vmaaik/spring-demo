@@ -5,9 +5,11 @@ import com.gebarowski.legacy.service.FortuneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("prototype")
 public class TennisCoach implements Coach {
 
     private FortuneService fortuneService;
@@ -18,17 +20,17 @@ public class TennisCoach implements Coach {
     @Value("${team}")
     private String team;
 
+    @Autowired
+    public TennisCoach(@Qualifier("badFortuneService") FortuneService fortuneService) {
+        this.fortuneService = fortuneService;
+    }
+
     public String getEmail() {
         return email;
     }
 
     public String getTeam() {
         return team;
-    }
-
-    @Autowired
-    public TennisCoach(@Qualifier("badFortuneService") FortuneService fortuneService) {
-        this.fortuneService = fortuneService;
     }
 
     @Override
