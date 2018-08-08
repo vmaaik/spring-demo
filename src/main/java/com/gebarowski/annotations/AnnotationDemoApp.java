@@ -13,6 +13,10 @@ public class AnnotationDemoApp {
 
         System.out.println(coach.getDailyFortune());
 
+        // setter injection
+        Coach coach1 = context.getBean("hockeyCoach", Coach.class);
+        System.out.println(coach1.getDailyFortune());
+
         context.close();
 
     }
