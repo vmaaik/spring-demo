@@ -1,12 +1,13 @@
-package com.gebarowski.annotations;
+package com.gebarowski.annotations.service;
 
 import com.gebarowski.legacy.service.FortuneService;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BadFortuneService implements FortuneService {
+public class RandomFortuneService implements FortuneService {
+
     @Override
     public String getFortune() {
-        return "Today is your bad day!";
+        return "RandomFortuneService";
     }
 }
