@@ -1,5 +1,6 @@
 package com.gebarowski.annotations;
 
+import com.gebarowski.annotations.coach.TennisCoach;
 import com.gebarowski.legacy.coach.Coach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -8,7 +9,7 @@ public class AnnotationDemoApp {
     public static void main(String[] args) {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("annotations/applicationContext.xml");
-        Coach coach = context.getBean("tennisCoach", Coach.class);
+        Coach coach = context.getBean("tennisCoach", TennisCoach.class);
         System.out.println(coach.getDailyWorkout());
         System.out.println(coach.getDailyFortune());
 
@@ -20,6 +21,11 @@ public class AnnotationDemoApp {
         Coach coach2 = context.getBean("footballCoach", Coach.class);
         System.out.println(coach2.getDailyWorkout());
         System.out.println(coach2.getDailyFortune());
+
+        // inject properties file
+        System.out.println(((TennisCoach) coach).getTeam());
+        System.out.println(((TennisCoach) coach).getEmail());
+
         context.close();
     }
 }
