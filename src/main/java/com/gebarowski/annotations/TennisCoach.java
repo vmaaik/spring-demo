@@ -1,10 +1,19 @@
 package com.gebarowski.annotations;
 
 import com.gebarowski.legacy.coach.Coach;
+import com.gebarowski.legacy.service.FortuneService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component("tennisCoach")
+@Component
 public class TennisCoach implements Coach {
+
+    private FortuneService fortuneService;
+
+    @Autowired
+    public TennisCoach(FortuneService fortuneService) {
+        this.fortuneService = fortuneService;
+    }
 
     @Override
     public String getDailyWorkout() {
@@ -13,6 +22,6 @@ public class TennisCoach implements Coach {
 
     @Override
     public String getDailyFortune() {
-        return null;
+        return fortuneService.getFortune();
     }
 }
