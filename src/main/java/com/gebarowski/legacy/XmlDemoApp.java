@@ -4,7 +4,7 @@ import com.gebarowski.legacy.coach.Coach;
 import com.gebarowski.legacy.coach.CricketCoach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class SpringHelloApp {
+public class XmlDemoApp {
     public static void main(String[] args) {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("legacy/applicationContext.xml");
