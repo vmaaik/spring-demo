@@ -1,19 +1,24 @@
-package com.gebarowski.annotations;
+package com.gebarowski.annotations.coach;
 
 import com.gebarowski.legacy.coach.Coach;
 import com.gebarowski.legacy.service.FortuneService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-public class FootballCoach implements Coach {
+public class TennisCoach implements Coach {
+
+    private FortuneService fortuneService;
 
     @Autowired
-    private FortuneService fortuneService;
+    public TennisCoach(@Qualifier("badFortuneService") FortuneService fortuneService) {
+        this.fortuneService = fortuneService;
+    }
 
     @Override
     public String getDailyWorkout() {
-        return "Run faster!";
+        return "Practice your backhand volley";
     }
 
     @Override
