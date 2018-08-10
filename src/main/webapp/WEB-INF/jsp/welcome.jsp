@@ -6,5 +6,6 @@
     <title>Hello</title>
 </head>
 <body>
+<a href="showForm">Open form</a>
 </body>
 </html>
