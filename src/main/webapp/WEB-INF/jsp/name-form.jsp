@@ -11,7 +11,7 @@
     <title>Basic jsp</title>
 </head>
 <body>
-<form action="processFormUpper" method="get">
+<form action="processFormUpper2" method="get">
     <input type="text" name="studentName" placeholder="What's your name?"/>
     <input type="submit">
 </form>
