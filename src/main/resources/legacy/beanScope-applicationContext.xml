@@ -6,10 +6,10 @@
 
 
     <bean id="myFortuneService"
-          class="com.gebarowski.legacy.service.HappyFortuneService"></bean>
+          class="com.gebarowski.tutorial.legacy.service.HappyFortuneService"></bean>
 
     <bean id="myCoach"
-          class="com.gebarowski.legacy.coach.TrackCoach"
+          class="com.gebarowski.tutorial.legacy.coach.TrackCoach"
           init-method="doMyStartupStuff"
           destroy-method="doMyCleanUpStuff">
         <constructor-arg ref="myFortuneService"/>
