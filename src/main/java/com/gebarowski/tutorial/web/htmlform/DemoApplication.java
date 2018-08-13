@@ -1,4 +1,4 @@
-package com.gebarowski.tutorial.web;
+package com.gebarowski.tutorial.web.htmlform;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
