@@ -1,5 +1,6 @@
-package com.gebarowski.probook.ch3;
+package com.gebarowski.probook.ch3.xmlbased;
 
+import com.gebarowski.probook.ch3.messagerenderer.MessageRenderer;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class DeclareSpringComponents {

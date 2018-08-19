@@ -11,9 +11,9 @@
 
     <context:component-scan base-package="com.gebarowski.probook.ch3"/>
 
-    <bean id="provider" class="com.gebarowski.probook.ch3.HelloSpringMessageProvider"/>
+    <bean id="provider" class="com.gebarowski.probook.ch3.messageprovider.HelloSpringMessageProvider"/>
     <bean id="renderer"
-          class="com.gebarowski.probook.ch3.StandardOutMessageProvider"
+          class="com.gebarowski.probook.ch3.messagerenderer.StandardOutMessageRenderer"
           p:messageProvider-ref="provider"
     />
 </beans>
