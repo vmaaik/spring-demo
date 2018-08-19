@@ -1,21 +1,12 @@
 package com.gebarowski.probook.ch3;
 
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
+@ComponentScan(basePackages = "com.gebarowski.probook.ch3")
 @Configuration
+@PropertySource("probook.ch3/probook.properties")
 public class HelloSpringConfiguration {
-
-    @Bean
-    public MessageProvider provider() {
-        return new HelloSpringMessageProvider();
-    }
-
-    @Bean
-    public MessageRenderer renderer() {
-        MessageRenderer renderer = new StandardOutMessageProvider();
-        renderer.setMessageProvider(provider());
-        return renderer;
-    }
 
 }
