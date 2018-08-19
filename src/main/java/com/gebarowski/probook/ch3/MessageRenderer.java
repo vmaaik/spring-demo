@@ -1,4 +1,4 @@
-package com.gebarowski.probook;
+package com.gebarowski.probook.ch3;
 
 public interface MessageRenderer {
     MessageProvider getMessageProvider();

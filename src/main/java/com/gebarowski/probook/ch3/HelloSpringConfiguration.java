@@ -1,4 +1,4 @@
-package com.gebarowski.probook;
+package com.gebarowski.probook.ch3;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
