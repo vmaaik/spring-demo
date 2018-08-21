@@ -6,6 +6,6 @@
     <title>Hello</title>
 </head>
 <body>
-<a href="spring/showForm">Open form</a>
+<a href="/showForm">Open form</a>
 </body>
 </html>
