@@ -17,11 +17,11 @@ public class StudentController {
     public String showForm(Model model) {
         Student student = new Student();
         model.addAttribute("student", student);
-        return "spring-student-form";
+        return "dropdown/spring-student-form";
     }
 
     @RequestMapping("/processForm")
     public String processForm(@ModelAttribute("student") Student student) {
-        return "spring-student-confirmation";
+        return "dropdown/spring-student-confirmation";
     }
 }

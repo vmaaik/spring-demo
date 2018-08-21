@@ -4,7 +4,7 @@
     <title>Student Confirmation Page</title>
 </head>
 <body>
-Result of form:
+Student has been confirmed!
 <br><br>
 Student first name: ${student.firstName}
 <br><br>
