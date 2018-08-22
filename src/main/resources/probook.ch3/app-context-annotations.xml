@@ -16,4 +16,11 @@
           class="com.gebarowski.probook.ch3.messagerenderer.StandardOutMessageRenderer"
           p:messageProvider-ref="provider"
     />
+    <bean id="injectSimpleConfig"
+          class="com.gebarowski.probook.ch3.spel.InjectSimpleConfig"/>
+    <bean id="injectSimpleSpel"
+          class="com.gebarowski.probook.ch3.spel.InjectSimpleSpel"
+          p:name="#{injectSimpleConfig.name}"
+          p:age="#{injectSimpleConfig.age + 1000}"
+          p:height="#{injectSimpleConfig.height + 400}"/>
 </beans>
