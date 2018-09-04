@@ -8,6 +8,12 @@ public class Student {
     public Student() {
     }
 
+    public Student(Long id, String name, String passportNumber) {
+        this.id = id;
+        this.name = name;
+        this.passportNumber = passportNumber;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Student{");
